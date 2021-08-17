@@ -44,7 +44,7 @@ class RubyVCR {
         "    body:",
         "      encoding: ASCII-8BIT",
         `      string: '${response.responseBody}'`,
-        `  recorded_at: ${response.date}`,
+        `  recorded_at: ${response.date.toUTCString()}`,
       );
     })
     generated.push(`recorded_with: Paw`);
